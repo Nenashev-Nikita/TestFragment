@@ -10,12 +10,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="5dp">
+
         <TextView
+            android:id="@+id/TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="start"
             android:layout_gravity="center_vertical"
-            android:text="сегодняшняя дата + все которые выбрал"/>
+            android:gravity="start"
+            android:text="сегодняшняя дата + все которые выбрал" />
         <Space
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -54,16 +56,6 @@
             android:layout_weight="2"
             android:layout_marginTop="5dp"
             android:orientation="vertical">
-
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tab_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <androidx.viewpager2.widget.ViewPager2
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
         </LinearLayout>
 
     <LinearLayout

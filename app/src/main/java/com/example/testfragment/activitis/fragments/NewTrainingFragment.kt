@@ -10,13 +10,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
-import android.widget.EditText
 import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.fragment.app.activityViewModels
 import com.example.testfragment.R
 import com.example.testfragment.activitis.DataModel
 import com.example.testfragment.activitis.contract.navigator
+import com.example.testfragment.activitis.domain.models.NameTraining
+import com.example.testfragment.activitis.domain.models.SaveParamNameTraining
+import com.example.testfragment.activitis.domain.usecase.GetNameTrainingUseCase
+import com.example.testfragment.activitis.domain.usecase.SaveNameTrainingUseCase
 import com.example.testfragment.databinding.FragmentNewTrainingBinding
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
@@ -24,6 +27,9 @@ import java.nio.charset.StandardCharsets
 class NewTrainingFragment : Fragment() {
     private val dataModel: DataModel by activityViewModels()
     lateinit var  binding: FragmentNewTrainingBinding
+
+    private val GetNameTrainingUseCase = GetNameTrainingUseCase()
+    private val SaveNameTrainingUseCase = SaveNameTrainingUseCase()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,7 +41,7 @@ class NewTrainingFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.includButton.button.setOnClickListener {
+        binding.save.setOnClickListener {
             val keyword = binding.EditName.text.toString()
             val encodedKeyword = URLEncoder.encode(keyword, StandardCharsets.UTF_8.name())
             dataModel.nameActivityTraining.value = encodedKeyword
@@ -50,11 +56,15 @@ class NewTrainingFragment : Fragment() {
         }
 
         binding.cancel.setOnClickListener {
-            onBackTrainingFragment()
+            val text = binding.EditName.text.toString()
+            val params = SaveParamNameTraining(name = text)
+            val result: Boolean = SaveNameTrainingUseCase.execute(param = params)
+            binding.TextView.text = "Save result = $result"
         }
 
-        binding.includButton.button.setOnClickListener {
-            showAlertDialog()
+        binding.save.setOnClickListener {
+            val userName: NameTraining = GetNameTrainingUseCase.execute()
+            binding.TextView.text = "${userName.firstName}"
         }
 
     }
