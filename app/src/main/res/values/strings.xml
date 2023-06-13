@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">TestFragment</string>
+    <string name="main_text">Tренировка ног</string>
+    <string name="chevrons">&lt;</string>
+    <string name="chevrons_right">&gt;</string>
+    <string name="defolt">от ошибки (No speakable text present)</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="NewTraining">название тренировки</string>
+    <string name="Text_button">Приседания\n3х8, 15кг</string>
+    <string name="Text_button1">Приседания</string>
+    <string name="Text_button2">3х8, 15кг</string>
+    <string name="count_approaches">Введите количество подходов</string>
+    <string name="count_retry">Введите количество повторений</string>
+    <string name="working_weight">Введите рабочий вес</string>
+    <string name="Go_button">Готова</string>
+    <string name="save">сохранить</string>
+    <string name="NewWorkout">Название упражнения</string>
+    <string name="action_yes">yes</string>
+    <string name="action_no">no</string>
+    <string name="action_ignore">ignor</string>
+    <string name="cancel">отмена</string>
+    <string name="buttonNewWorkout">расчитать</string>
+</resources>
