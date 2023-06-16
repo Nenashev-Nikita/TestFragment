@@ -12,7 +12,7 @@
         android:theme="@style/Theme.TestFragment"
         tools:targetApi="31">
         <activity
-            android:name=".activitis.TestActivity"
+            android:name=".presentation.TestActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
