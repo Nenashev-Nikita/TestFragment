@@ -48,15 +48,34 @@
         android:padding="5dp"
         android:autofillHints="name"
         android:hint="@string/NewTraining"/>
+    <EditText
+        android:id="@+id/Edit_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:maxLines="1"
+        android:imeOptions="actionNext"
+        android:padding="5dp"
+        android:autofillHints="name"
+        android:hint="Описание тренировки"/>
 
-        <LinearLayout
-            android:id="@+id/scrollButton"
+    <LinearLayout
+        android:id="@+id/scrollButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/NewWorkout"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:layout_marginTop="5dp"
-            android:orientation="vertical">
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="+ Добавить упражнение"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="20sp" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
