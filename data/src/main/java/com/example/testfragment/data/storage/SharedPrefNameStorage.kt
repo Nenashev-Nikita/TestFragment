@@ -7,8 +7,6 @@ private  const val SHARED_PREFS_NAME = "shared_prefs_name"
 private  const val KEY_NAME = "firstName"
 private const val DEFAULT_NAME = "Default last name"
 
-
-
 class SharedPrefNameStorage(context: Context) : NameTrainingStorage {
 
     private val sharedPreferences =

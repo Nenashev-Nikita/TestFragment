@@ -35,15 +35,6 @@ class WorkoutFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-
-        binding.list.includButton.button.setOnClickListener {
-            dataModel.nameTraining.value = "ghd87sfhs"
-        }
-
-        binding.list.nog.setOnClickListener {
-            //DataText()
-        }
-
         binding.floatingActionButton.setOnClickListener {
             onStartNewWorkoutFragment()
         }

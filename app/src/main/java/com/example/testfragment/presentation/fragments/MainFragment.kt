@@ -36,15 +36,6 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-
-        binding.list.includButton.button.setOnClickListener {
-            dataModel.nameTraining.value = "ghd87sfhs"
-        }
-
-        binding.list.nog.setOnClickListener {
-            //DataText()
-        }
-
         /*binding.floatingActionButton.setOnClickListener {
             onStartNewWorkoutFragment()
         }*/
@@ -66,7 +57,6 @@ class MainFragment : Fragment() {
         val ourFontsize = 24f
         binding.data.dataTextView.text = ct
         binding.data.dataTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, ourFontsize)
-
     }
     companion object {
         @JvmStatic

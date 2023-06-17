@@ -27,7 +27,7 @@ class NewTrainingFragment : Fragment() {
     lateinit var  binding: FragmentNewTrainingBinding
 
     private val nameRepository by lazy(LazyThreadSafetyMode.NONE) {
-        NameRepositoryImpl(nameTrainingStorage = SharedPrefNameStorage(context = ))
+        NameRepositoryImpl(nameTrainingStorage = SharedPrefNameStorage(context = requireContext()))
     }
     private val getNameTrainingUseCase by lazy(LazyThreadSafetyMode.NONE) {
         com.example.testfragment.domain.usecase.GetNameTrainingUseCase(

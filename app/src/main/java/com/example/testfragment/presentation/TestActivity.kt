@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.testfragment.R
 import com.example.testfragment.contract.Navigator
+import com.example.testfragment.data.repository.NameRepositoryImpl
+import com.example.testfragment.data.storage.SharedPrefNameStorage
 import com.example.testfragment.presentation.fragments.MainFragment
 import com.example.testfragment.presentation.fragments.NewTrainingFragment
 import com.example.testfragment.presentation.fragments.NewWorkoutFragment
