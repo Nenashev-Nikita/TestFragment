@@ -40,19 +40,20 @@ class MainFragment : Fragment() {
             onStartNewWorkoutFragment()
         }*/
 
-        binding.meny.buttonTrain.setOnClickListener{
+        binding.meny.buttonTraining.setOnClickListener{
             onStartTrainingFragment()
         }
-
+        binding.meny.buttonTrain.setOnClickListener{
+            onStartTrainFragment()
+        }
     }
 
-    private fun onStartNewWorkoutFragment() {
-        navigator().showNewWorkoutFragment()
-    }
     private fun onStartTrainingFragment() {
-        navigator().showTrainingFragment()
+        navigator().startTrainingFragment()
     }
-
+    private fun onStartTrainFragment() {
+        navigator().startTrainFragment()
+    }
     private fun DataText(){
         val ourFontsize = 24f
         binding.data.dataTextView.text = ct

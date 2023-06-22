@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import com.example.testfragment.R
 import com.example.testfragment.presentation.DataModel
 import com.example.testfragment.contract.navigator
 import com.example.testfragment.databinding.FragmentWorkoutBinding
@@ -15,10 +16,9 @@ import java.util.*
 //const val ARG_OBJECT = "object"
 
 class WorkoutFragment : Fragment() {
-    private val dataModel: DataModel by activityViewModels()
+    //private val dataModel: DataModel by activityViewModels()
     lateinit var  binding: FragmentWorkoutBinding
-
-    private val ct: String? = DateFormat.getDateInstance().format(Date())
+    //private val ct: String? = DateFormat.getDateInstance().format(Date())
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,25 +34,31 @@ class WorkoutFragment : Fragment() {
      */
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
-        binding.floatingActionButton.setOnClickListener {
-            onStartNewWorkoutFragment()
-        }
-
-        binding.meny.buttonTrain.setOnClickListener{
+        binding.cancel.setOnClickListener {
             onStartTrainingFragment()
         }
 
+        binding.save.setOnClickListener {
+            onStartTrainingFragment()
+        }
+        binding.newWorkout.setOnClickListener {
+            onStartNewTrainFragment()
+        }
+        binding.buttonList.button.setOnClickListener {
+            onStartExercisesFragment()
+        }
     }
 
-    private fun onStartNewWorkoutFragment() {
-        navigator().showNewWorkoutFragment()
-    }
     private fun onStartTrainingFragment() {
-        navigator().showTrainingFragment()
+        navigator().startTrainingFragment()
     }
 
-
+    private fun onStartNewTrainFragment() {
+        navigator().startNewTrainFragment()
+    }
+    private fun onStartExercisesFragment() {
+        navigator().startExercisesFragment()
+    }
     companion object {
         @JvmStatic
         fun newInstance() = WorkoutFragment()

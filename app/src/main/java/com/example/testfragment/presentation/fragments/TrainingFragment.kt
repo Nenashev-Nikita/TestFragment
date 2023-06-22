@@ -36,12 +36,14 @@ class TrainingFragment : Fragment() {
             onStartNewTrainingFragment()
         }
 
-        binding.meny.buttonMeny.setOnClickListener{
-            onStartMainFragment()
-        }
-
         binding.nog.setOnClickListener {
             onStartWorkoutFragment()
+        }
+        binding.meny.buttonMeny.setOnClickListener {
+            onStartMainFragment()
+        }
+        binding.meny.buttonTrain.setOnClickListener {
+            onStartTrainFragment()
         }
 
     }
@@ -58,15 +60,18 @@ class TrainingFragment : Fragment() {
 
 
     private fun onStartNewTrainingFragment() {
-        navigator().showNewTrainingFragment()
+        navigator().startNewTrainingFragment()
     }
 
     private fun onStartWorkoutFragment(){
-        navigator().showWorkoutFragment()
+        navigator().startWorkoutFragment()
     }
 
     private fun onStartMainFragment() {
-        navigator().showMainFragment()
+        navigator().startMainFragment()
+    }
+    private fun onStartTrainFragment(){
+        navigator().startTrainFragment()
     }
 
     companion object {

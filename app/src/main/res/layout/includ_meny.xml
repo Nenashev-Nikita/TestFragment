@@ -13,14 +13,14 @@
         android:text="Меню" />
 
     <Button
-        android:id="@+id/button_Train"
+        android:id="@+id/button_Training"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="Тренировка" />
 
     <Button
-        android:id="@+id/button_Workout"
+        android:id="@+id/button_Train"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"

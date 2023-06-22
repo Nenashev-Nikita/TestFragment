@@ -6,14 +6,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.testfragment.R
 import com.example.testfragment.contract.Navigator
-import com.example.testfragment.data.repository.NameRepositoryImpl
-import com.example.testfragment.data.storage.SharedPrefNameStorage
 import com.example.testfragment.presentation.fragments.MainFragment
 import com.example.testfragment.presentation.fragments.NewTrainingFragment
 import com.example.testfragment.presentation.fragments.NewWorkoutFragment
 import com.example.testfragment.presentation.fragments.TrainingFragment
 import com.example.testfragment.presentation.fragments.WorkoutFragment
 import com.example.testfragment.databinding.ActivityMainBinding
+import com.example.testfragment.presentation.fragments.ExercisesFragment
+import com.example.testfragment.presentation.fragments.NewTrainFragment
+import com.example.testfragment.presentation.fragments.TrainFragment
 
 class TestActivity : AppCompatActivity(), Navigator {
 
@@ -67,22 +68,34 @@ class TestActivity : AppCompatActivity(), Navigator {
                 .commit()
         }
 
-    override fun showTrainingFragment() {
+    override fun startTrainingFragment() {
         openFrag(TrainingFragment.newInstance(), R.id.start_fragment)
     }
-    override fun showWorkoutFragment() {
+    override fun startWorkoutFragment() {
         openFrag(WorkoutFragment.newInstance(), R.id.start_fragment)
     }
 
-    override fun showNewWorkoutFragment(){
+    override fun startNewWorkoutFragment(){
         openFrag(NewWorkoutFragment.newInstance(), R.id.start_fragment)
     }
 
-    override fun showMainFragment(){
+    override fun startMainFragment(){
         openFrag(MainFragment.newInstance(), R.id.start_fragment)
     }
-    override fun showNewTrainingFragment(){
+    override fun startNewTrainingFragment(){
         openFrag(NewTrainingFragment.newInstance(), R.id.start_fragment)
+    }
+
+    override fun startExercisesFragment(){
+        openFrag(ExercisesFragment.newInstance(), R.id.start_fragment)
+    }
+
+    override fun startNewTrainFragment() {
+        openFrag(NewTrainFragment.newInstance(), R.id.start_fragment)
+    }
+
+    override fun startTrainFragment(){
+        openFrag(TrainFragment.newInstance(), R.id.start_fragment)
     }
 
     override fun goBack() {
