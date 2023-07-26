@@ -77,22 +77,34 @@ class TestActivity : AppCompatActivity(), Navigator {
                 .commit()
         }
 
-    override fun showTrainingFragment() {
+    override fun startTrainingFragment() {
         openFrag(TrainingFragment.newInstance(), R.id.start_fragment)
     }
-    override fun showWorkoutFragment() {
+    override fun startWorkoutFragment() {
         openFrag(WorkoutFragment.newInstance(), R.id.start_fragment)
     }
 
-    override fun showNewWorkoutFragment(){
+    override fun startNewWorkoutFragment(){
         openFrag(NewWorkoutFragment.newInstance(), R.id.start_fragment)
     }
 
-    override fun showMainFragment(){
+    override fun startMainFragment(){
         openFrag(MainFragment.newInstance(), R.id.start_fragment)
     }
-    override fun showNewTrainingFragment(){
+    override fun startNewTrainingFragment(){
         openFrag(NewTrainingFragment.newInstance(), R.id.start_fragment)
+    }
+
+    override fun startExercisesFragment(){
+        openFrag(ExercisesFragment.newInstance(), R.id.start_fragment)
+    }
+
+    override fun startNewTrainFragment() {
+        openFrag(NewTrainFragment.newInstance(), R.id.start_fragment)
+    }
+
+    override fun startTrainFragment(){
+        openFrag(TrainFragment.newInstance(), R.id.start_fragment)
     }
 
     override fun goBack() {

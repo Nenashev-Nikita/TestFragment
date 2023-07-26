@@ -54,7 +54,6 @@ class NewTrainingFragment : Fragment() {
             val encodedKeyword = URLEncoder.encode(keyword, StandardCharsets.UTF_8.name())
             dataModel.nameActivityTraining.value = encodedKeyword
             onGetTextTraining()
-
         }
         binding.editName.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_GO) {
@@ -117,7 +116,7 @@ class NewTrainingFragment : Fragment() {
     }
 
     private fun onBackTrainingFragment(){
-        navigator().showTrainingFragment()
+        navigator().startTrainingFragment()
     }
 
     companion object {

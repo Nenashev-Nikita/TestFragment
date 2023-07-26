@@ -10,19 +10,23 @@ fun Fragment.navigator(): Navigator {
 
 interface Navigator {
 
-    fun showTrainingFragment()
+    fun startTrainingFragment()
 
-    fun showWorkoutFragment()
+    fun startWorkoutFragment()
 
-    fun showNewWorkoutFragment()
+    fun startNewWorkoutFragment()
 
-    fun showNewTrainingFragment()
+    fun startNewTrainingFragment()
 
-    fun showMainFragment()
+    fun startMainFragment()
 
     fun goBack()
 
     fun goToMenu()
 
+    fun startExercisesFragment()
 
+    fun startNewTrainFragment()
+
+    fun startTrainFragment()
 }

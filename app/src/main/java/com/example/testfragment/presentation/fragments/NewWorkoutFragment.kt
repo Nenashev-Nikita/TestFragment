@@ -5,13 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
-import com.example.testfragment.R
 import com.example.testfragment.contract.navigator
-import com.example.testfragment.databinding.FragmentNewTrainingBinding
 import com.example.testfragment.databinding.FragmentNewWorkoutBinding
-import java.net.URLEncoder
-import java.nio.charset.StandardCharsets
 
 class NewWorkoutFragment : Fragment() {
 
@@ -56,9 +51,8 @@ class NewWorkoutFragment : Fragment() {
     }
 
     private fun onBackWorkoutFragment(){
-        navigator().showMainFragment()
+        navigator().startMainFragment()
     }
-
 
 
     companion object {

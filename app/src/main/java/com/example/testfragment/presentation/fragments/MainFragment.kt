@@ -40,22 +40,22 @@ class MainFragment : Fragment() {
             onStartNewWorkoutFragment()
         }*/
 
-        binding.menu.buttonTrain.setOnClickListener{
+        binding.meny.buttonTraining.setOnClickListener{
             onStartTrainingFragment()
         }
-
+        binding.meny.buttonTrain.setOnClickListener{
+            onStartTrainFragment()
+        }
     }
 
-    private fun onStartNewWorkoutFragment() {
-        navigator().showNewWorkoutFragment()
-    }
     private fun onStartTrainingFragment() {
-        navigator().showTrainingFragment()
+        navigator().startTrainingFragment()
     }
-
+    private fun onStartTrainFragment() {
+        navigator().startTrainFragment()
+    }
     private fun DataText(){
         val ourFontsize = 24f
-        //DateFormat.getDateInstance().format()
         binding.data.dataTextView.text = ct
         binding.data.dataTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, ourFontsize)
     }
