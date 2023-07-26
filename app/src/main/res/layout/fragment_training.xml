@@ -80,7 +80,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <include
-        android:id="@+id/meny"
+        android:id="@+id/menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         layout="@layout/includ_meny"/>

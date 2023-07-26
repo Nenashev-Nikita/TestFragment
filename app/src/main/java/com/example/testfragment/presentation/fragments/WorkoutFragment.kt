@@ -39,7 +39,7 @@ class WorkoutFragment : Fragment() {
             onStartNewWorkoutFragment()
         }
 
-        binding.meny.buttonTrain.setOnClickListener{
+        binding.menu.buttonTrain.setOnClickListener{
             onStartTrainingFragment()
         }
 

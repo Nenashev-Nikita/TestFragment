@@ -14,6 +14,7 @@ import com.example.testfragment.presentation.fragments.NewWorkoutFragment
 import com.example.testfragment.presentation.fragments.TrainingFragment
 import com.example.testfragment.presentation.fragments.WorkoutFragment
 import com.example.testfragment.databinding.ActivityMainBinding
+import com.example.testfragment.features.exercises.ui.ExercisesFragment
 
 class TestActivity : AppCompatActivity(), Navigator {
 
@@ -30,8 +31,17 @@ class TestActivity : AppCompatActivity(), Navigator {
          * 26-29 когда работает pager2
          */
 
-        openFrag(MainFragment.newInstance(), R.id.start_fragment)
-        /*
+        /*supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.start_fragment, ExercisesFragment.newInstance())
+            .commit()*/
+
+        openFrag(ExercisesFragment.newInstance(), R.id.start_fragment)
+
+        //openFrag(MainFragment.newInstance(), R.id.start_fragment)
+
+
+    /*
         adapter = NumberAdapter(this)
         viewPager = findViewById(R.id.ViewPager)
         viewPager.adapter = adapter*/

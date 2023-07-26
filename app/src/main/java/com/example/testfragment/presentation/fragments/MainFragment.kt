@@ -40,7 +40,7 @@ class MainFragment : Fragment() {
             onStartNewWorkoutFragment()
         }*/
 
-        binding.meny.buttonTrain.setOnClickListener{
+        binding.menu.buttonTrain.setOnClickListener{
             onStartTrainingFragment()
         }
 
@@ -55,6 +55,7 @@ class MainFragment : Fragment() {
 
     private fun DataText(){
         val ourFontsize = 24f
+        //DateFormat.getDateInstance().format()
         binding.data.dataTextView.text = ct
         binding.data.dataTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, ourFontsize)
     }

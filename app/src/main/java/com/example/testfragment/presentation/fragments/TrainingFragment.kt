@@ -36,7 +36,7 @@ class TrainingFragment : Fragment() {
             onStartNewTrainingFragment()
         }
 
-        binding.meny.buttonMeny.setOnClickListener{
+        binding.menu.buttonMeny.setOnClickListener{
             onStartMainFragment()
         }
 

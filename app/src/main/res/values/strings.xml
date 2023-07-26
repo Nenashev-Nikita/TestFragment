@@ -21,4 +21,9 @@
     <string name="action_ignore">ignor</string>
     <string name="cancel">отмена</string>
     <string name="buttonNewWorkout">расчитать</string>
+    <string name="units">Единицы измерения</string>
+    <string name="sex">Пол</string>
+    <string name="age">Возраст</string>
+    <string name="height">Рост</string>
+    <string name="weight">Вес</string>
 </resources>

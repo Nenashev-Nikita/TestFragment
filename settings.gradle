@@ -16,3 +16,5 @@ rootProject.name = "TestFragment"
 include ':app'
 include ':data'
 include ':domain'
+include ':network'
+include ':features:exercises'

@@ -50,13 +50,13 @@ class NewTrainingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.save.setOnClickListener {
-            val keyword = binding.EditName.text.toString()
+            val keyword = binding.editName.text.toString()
             val encodedKeyword = URLEncoder.encode(keyword, StandardCharsets.UTF_8.name())
             dataModel.nameActivityTraining.value = encodedKeyword
             onGetTextTraining()
 
         }
-        binding.EditName.setOnEditorActionListener { _, actionId, _ ->
+        binding.editName.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_GO) {
                 return@setOnEditorActionListener onGetTextTraining()
             }
@@ -64,7 +64,7 @@ class NewTrainingFragment : Fragment() {
         }
 
         binding.cancel.setOnClickListener {
-            val text = binding.EditName.text.toString()
+            val text = binding.editName.text.toString()
             val params = com.example.testfragment.domain.models.SaveParamNameTraining(name = text)
             val result: Boolean = saveNameTrainingUseCase.execute(param = params)
             binding.TextView.text = "Save result = $result"
@@ -77,9 +77,9 @@ class NewTrainingFragment : Fragment() {
 
     }
     private fun onGetTextTraining(): Boolean{
-        val keyword = binding.EditName.text.toString()
+        val keyword = binding.editName.text.toString()
         if (keyword.isBlank()) {
-            binding.EditName.error = "Нет названия"
+            binding.editName.error = "Нет названия"
         }
         return true
 

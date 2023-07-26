@@ -45,7 +45,7 @@
                         android:textSize="20sp"/>
 
                     <include
-                        android:id="@+id/includ_button"
+                        android:id="@+id/include_button"
                         layout="@layout/includ_button_list"/>
 
                 </LinearLayout>
