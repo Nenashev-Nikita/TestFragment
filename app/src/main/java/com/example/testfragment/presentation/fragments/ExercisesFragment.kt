@@ -9,32 +9,33 @@ import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import com.example.testfragment.R
 import com.example.testfragment.contract.navigator
-import com.example.testfragment.databinding.FragmentExercisesBinding
+//import com.example.testfragment.databinding.FragmentExercisesBinding
 
 class ExercisesFragment: Fragment() {
-    lateinit var binding: FragmentExercisesBinding
+    //lateinit var binding: FragmentExercisesBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentExercisesBinding.inflate(inflater)
-        return binding.root
+        //binding = FragmentExercisesBinding.inflate(inflater)
+        return null
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.ButtonCount.buttonPlus.setOnClickListener {
+        /*binding.ButtonCount.buttonPlus.setOnClickListener {
             NewCreatApproach()
-        }
+        }*/
     }
     private fun NewCreatApproach() {
-        /*val dynamicButton = Button(context)
+val dynamicButton = Button(context)
         dynamicButton.layoutParams = LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.MATCH_PARENT,
             LinearLayout.LayoutParams.WRAP_CONTENT
         )
-        dynamicButton.text = "fsdgs"*/
+        dynamicButton.text = "fsdgs"
+
 
     }
     private fun onBack(){

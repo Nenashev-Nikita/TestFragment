@@ -40,12 +40,12 @@ class MainFragment : Fragment() {
             onStartNewWorkoutFragment()
         }*/
 
-        binding.meny.buttonTraining.setOnClickListener{
+        /*binding.meny.buttonTraining.setOnClickListener{
             onStartTrainingFragment()
         }
         binding.meny.buttonTrain.setOnClickListener{
             onStartTrainFragment()
-        }
+        }*/
     }
 
     private fun onStartTrainingFragment() {

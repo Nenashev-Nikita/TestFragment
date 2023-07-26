@@ -39,12 +39,12 @@ class TrainingFragment : Fragment() {
         binding.nog.setOnClickListener {
             onStartWorkoutFragment()
         }
-        binding.meny.buttonMeny.setOnClickListener {
+        /*binding.meny.buttonMeny.setOnClickListener {
             onStartMainFragment()
         }
         binding.meny.buttonTrain.setOnClickListener {
             onStartTrainFragment()
-        }
+        }*/
 
     }
     private fun NewCreatButton() {

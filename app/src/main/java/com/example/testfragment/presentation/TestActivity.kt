@@ -15,6 +15,7 @@ import com.example.testfragment.presentation.fragments.TrainingFragment
 import com.example.testfragment.presentation.fragments.WorkoutFragment
 import com.example.testfragment.databinding.ActivityMainBinding
 import com.example.testfragment.features.exercises.ui.ExercisesFragment
+import com.example.testfragment.presentation.fragments.NewTrainFragment
 
 class TestActivity : AppCompatActivity(), Navigator {
 
@@ -104,7 +105,7 @@ class TestActivity : AppCompatActivity(), Navigator {
     }
 
     override fun startTrainFragment(){
-        openFrag(TrainFragment.newInstance(), R.id.start_fragment)
+        openFrag(TrainingFragment.newInstance(), R.id.start_fragment)
     }
 
     override fun goBack() {
